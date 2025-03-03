@@ -2,17 +2,9 @@ name: Sandbox CI CD
 on:
   workflow_dispatch:
     inputs:
-      homedrive:
-        description: 'The home drive on the machine'
+      dryrun:
+        description: 'Use deployment placeholder'
         required: true
-      logLevel:
-        description: 'Log level'
-        default: 'warning' 
-        type: choice
-        options:
-        - info
-        - warning
-        - debug 
       environment:
         description: 'Deployment environment'
         required: true 
