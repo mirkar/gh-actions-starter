@@ -13,14 +13,13 @@ on:
         - info
         - warning
         - debug 
-      tag:
-        description: 'Apply tag after successfull test run'
-        required: true 
-        type: boolean 
       environment:
-        description: 'Environment to run tests against'
-        type: environment
+        description: 'Deployment environment'
         required: true 
+        type: choice
+        options:
+          - SBX 
+
 
 jobs:
   build:
