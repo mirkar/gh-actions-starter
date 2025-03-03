@@ -21,6 +21,8 @@ jobs:
     steps:
       - run: |
           echo "::warning file=app.js,line=1::Missing semicolon"
+          echo "::notice file=app.js,line=1::Missing semicolon"
+        name: Echo samples  
 
       - run: |
           echo "dryrun: ${{ inputs.dryrun }}"
