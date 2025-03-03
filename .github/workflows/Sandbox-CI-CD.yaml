@@ -19,10 +19,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - run: echo "Hello world!" 
+      - run: |
+          echo "::warning file=app.js,line=1::Missing semicolon"
 
       - run: |
           echo "dryrun: ${{ inputs.dryrun }}"
-          echo "Environment ${{ inputs.environment }}"
+          echo "Environment: ${{ inputs.environment }}"
         name: Workflow Inputs
         if: ${{ github.event_name == 'workflow_dispatch' }}      
