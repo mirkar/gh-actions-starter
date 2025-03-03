@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ts-sample/src
+        working-directory: ts-sample
 
     steps:
         - uses: actions/checkout@v4
@@ -22,5 +22,12 @@ jobs:
             node-version: '20.x'
 
         - run: pwd
+
+        - run: ls
+
+        - name: Install dependencies
+          run: yarn
+
+        - run: yarn build
 
         - run: ls
