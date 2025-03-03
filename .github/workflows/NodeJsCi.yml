@@ -8,9 +8,9 @@ on:
 jobs:
   build:  
     runs-on: ubuntu-latest
-    # defaults:
-    #   run:
-    #     working-directory: src
+    defaults:
+      run:
+        working-directory: ts-sample/src
 
     steps:
         - uses: actions/checkout@v4
