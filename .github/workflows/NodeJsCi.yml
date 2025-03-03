@@ -31,3 +31,5 @@ jobs:
         - run: yarn build
 
         - run: ls
+
+        - run: yarn run-app
