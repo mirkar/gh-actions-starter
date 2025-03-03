@@ -4,6 +4,7 @@ on:
     inputs:
       dryrun:
         description: 'Use deployment placeholder'
+        type: boolean 
         required: true
       environment:
         description: 'Deployment environment'
@@ -19,3 +20,9 @@ jobs:
 
     steps:
       - run: echo "Hello world!" 
+
+      - run: |
+          echo "dryrun: ${{ inputs.dryrun }}"
+          echo "Environment ${{ inputs.environment }}"
+        name: Workflow Inputs
+        if: ${{ github.event_name == 'workflow_dispatch' }}      
