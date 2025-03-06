@@ -28,6 +28,7 @@ jobs:
       - run: |
           echo "::notice file=app.js,line=1,title=YOUR-TITLE::Missing semicolon"
           echo "::warning file=app.js,line=1,col=5,endColumn=7,title=YOUR-TITLE::Missing semicolon"
+          echo "::notice title=NOTICE-02-EXAMPLE::Only title in the notice, no file or line"
           echo -e "\033[1;33mTest yellow"
         name: Echo samples  
 
