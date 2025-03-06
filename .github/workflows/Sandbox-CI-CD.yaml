@@ -17,6 +17,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ts-sample
 
     steps:
       - run: |
@@ -46,7 +49,7 @@ jobs:
 
       -  name: Build
          run: yarn build
-         
+
       - run: ls
       -  name: Run application
          run: yarn run-app
